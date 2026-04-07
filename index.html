@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameZone - Marketplace Game Key, Item, Akun & Voucher Terpercaya</title>
+  <meta name="description"
+    content="GameZone adalah marketplace terpercaya untuk Top Up Game, Game Key, Akun, Voucher, dan Item Game. Pembayaran aman, harga terbaik, garansi uang kembali." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="ik-modal.css" />
+  <link rel="stylesheet" href="xc-modal.css" />
+</head>
+
+<body>
+  <!-- Floating particles background -->
+  <div class="particles-container" id="particles-container"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo" id="logo-home">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Game<span class="logo-accent">Zone</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#categories" class="nav-link" id="nav-categories">Kategori</a>
+        <a href="#top-up" class="nav-link" id="nav-topup">Top Up</a>
+        <a href="#game-key" class="nav-link" id="nav-gamekey">Game Key</a>
+        <a href="#voucher" class="nav-link" id="nav-voucher">Voucher</a>
+        <a href="#promo" class="nav-link" id="nav-promo">Promo</a>
+      </nav>
+
+      <div class="nav-search" id="nav-search-wrapper">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" class="search-input" placeholder="Cari game, item, voucher..." />
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <button class="btn-cart" id="btn-cart" aria-label="Cart">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-badge" id="cart-badge">0</span>
+        </button>
+
+        <!-- Guest buttons -->
+        <div class="nav-guest" id="nav-guest">
+          <a href="auth.html?tab=login" class="btn-login" id="btn-login" style="text-decoration:none;">Masuk</a>
+          <a href="auth.html?tab=register" class="btn-register" id="btn-register"
+            style="text-decoration:none;">Daftar</a>
+        </div>
+
+        <!-- Logged-in user avatar -->
+        <div class="nav-user hidden" id="nav-user">
+          <button class="user-avatar-btn" id="user-avatar-btn">
+            <div class="user-avatar" id="user-avatar-circle">U</div>
+            <span class="user-name-short" id="user-name-short">User</span>
+            <span class="user-arrow">▾</span>
+          </button>
+          <div class="user-dropdown" id="user-dropdown">
+            <div class="user-dropdown-header" id="user-dropdown-header">
+              <div class="udh-avatar" id="udh-avatar">U</div>
+              <div>
+                <div class="udh-name" id="udh-name">Nama User</div>
+                <div class="udh-email" id="udh-email">email@contoh.com</div>
+              </div>
+            </div>
+            <div class="user-dropdown-divider"></div>
+            <a href="#" class="user-dropdown-item" id="dd-orders">
+              <span>📋</span> Pesanan Saya
+            </a>
+            <a href="#" class="user-dropdown-item" id="dd-profile">
+              <span>👤</span> Profil Saya
+            </a>
+            <a href="#" class="user-dropdown-item" id="dd-wallet">
+              <span>💰</span> GameZone Wallet
+            </a>
+            <div class="user-dropdown-divider"></div>
+            <a href="#" class="user-dropdown-item logout-item" id="dd-logout">
+              <span>🚪</span> Keluar
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#categories" class="mobile-nav-link" id="mnav-categories">Kategori</a>
+    <a href="#top-up" class="mobile-nav-link" id="mnav-topup">Top Up</a>
+    <a href="#game-key" class="mobile-nav-link" id="mnav-gamekey">Game Key</a>
+    <a href="#voucher" class="mobile-nav-link" id="mnav-voucher">Voucher</a>
+    <a href="#promo" class="mobile-nav-link" id="mnav-promo">Promo</a>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-content">
+        <div class="hero-badge">🎮 Marketplace Game #1 Indonesia</div>
+        <h1 class="hero-title">
+          Beli Game, Top Up,<br />
+          <span class="hero-title-gradient">Voucher & Item</span><br />
+          Aman & Terpercaya
+        </h1>
+        <p class="hero-desc">
+          Temukan ribuan produk digital gaming dari seller terpercaya.<br />
+          Pembayaran aman, pengiriman instan, garansi uang kembali.
+        </p>
+        <div class="hero-search">
+          <input type="text" id="hero-search-input" class="hero-search-input" placeholder="Cari game favorit kamu..." />
+          <button class="hero-search-btn" id="hero-search-btn">Cari Sekarang</button>
+        </div>
+        <div class="hero-tags">
+          <button class="hero-tag" id="tag-ml">Mobile Legends</button>
+          <button class="hero-tag" id="tag-ff">Free Fire</button>
+          <button class="hero-tag" id="tag-steam">Steam</button>
+          <button class="hero-tag" id="tag-roblox">Roblox</button>
+          <button class="hero-tag" id="tag-valorant">Valorant</button>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">2.5M+</div>
+          <div class="stat-label">Pengguna Aktif</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">500K+</div>
+          <div class="stat-label">Transaksi/Bulan</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">10K+</div>
+          <div class="stat-label">Produk Tersedia</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">4.9★</div>
+          <div class="stat-label">Rating Marketplace</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMO BANNER SLIDER -->
+    <section class="promo-section" id="promo">
+      <div class="container">
+        <div class="promo-slider" id="promo-slider">
+          <div class="promo-slide active" id="promo-1">
+            <div class="promo-card promo-ml">
+              <div class="promo-content">
+                <div class="promo-badge">🔥 HOT DEAL</div>
+                <h3>Top Up Mobile Legends</h3>
+                <p>Diskon hingga 20% untuk pembelian Diamond!</p>
+                <button class="promo-btn" id="promo-ml-btn">Top Up Sekarang</button>
+              </div>
+              <div class="promo-img-area">
+                <div class="promo-gem">💎</div>
+              </div>
+            </div>
+          </div>
+          <div class="promo-slide" id="promo-2">
+            <div class="promo-card promo-steam">
+              <div class="promo-content">
+                <div class="promo-badge">🎮 NEW ARRIVAL</div>
+                <h3>Game Key Terbaru</h3>
+                <p>Steam Key dengan harga termurah di Indonesia!</p>
+                <button class="promo-btn" id="promo-steam-btn">Lihat Koleksi</button>
+              </div>
+              <div class="promo-img-area">
+                <div class="promo-gem">🕹️</div>
+              </div>
+            </div>
+          </div>
+          <div class="promo-slide" id="promo-3">
+            <div class="promo-card promo-ff">
+              <div class="promo-content">
+                <div class="promo-badge">⚡ FLASH SALE</div>
+                <h3>Free Fire Diamonds</h3>
+                <p>Flash Sale! Harga spesial selama 24 jam!</p>
+                <button class="promo-btn" id="promo-ff-btn">Grab Now!</button>
+              </div>
+              <div class="promo-img-area">
+                <div class="promo-gem">🔥</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="promo-dots" id="promo-dots">
+          <button class="promo-dot active" id="dot-0" data-index="0"></button>
+          <button class="promo-dot" id="dot-1" data-index="1"></button>
+          <button class="promo-dot" id="dot-2" data-index="2"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section class="categories-section" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Kategori Produk</h2>
+          <p class="section-subtitle">Temukan semua kebutuhan gaming kamu di sini</p>
+        </div>
+        <div class="categories-grid">
+          <button class="category-card active" id="cat-all" data-category="all">
+            <span class="cat-icon">🎯</span>
+            <span class="cat-name">Semua</span>
+          </button>
+          <button class="category-card" id="cat-topup" data-category="topup">
+            <span class="cat-icon">⚡</span>
+            <span class="cat-name">Top Up</span>
+          </button>
+          <button class="category-card" id="cat-gamekey" data-category="gamekey">
+            <span class="cat-icon">🔑</span>
+            <span class="cat-name">Game Key</span>
+          </button>
+          <button class="category-card" id="cat-akun" data-category="akun">
+            <span class="cat-icon">👤</span>
+            <span class="cat-name">Akun</span>
+          </button>
+          <button class="category-card" id="cat-voucher" data-category="voucher">
+            <span class="cat-icon">🎟️</span>
+            <span class="cat-name">Voucher</span>
+          </button>
+          <button class="category-card" id="cat-item" data-category="item">
+            <span class="cat-icon">⚔️</span>
+            <span class="cat-name">Item</span>
+          </button>
+          <button class="category-card" id="cat-streaming" data-category="streaming">
+            <span class="cat-icon">📺</span>
+            <span class="cat-name">Streaming</span>
+          </button>
+          <button class="category-card" id="cat-joki" data-category="joki">
+            <span class="cat-icon">🏆</span>
+            <span class="cat-name">Joki</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOP UP SECTION -->
+    <section class="products-section" id="top-up">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">⚡ Top Up Game Populer</h2>
+          <a href="#" class="see-all" id="see-all-topup">Lihat Semua →</a>
+        </div>
+        <div class="products-grid" id="topup-grid">
+          <!-- Products injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- GAME KEY SECTION -->
+    <section class="products-section" id="game-key">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">🔑 Game Key Terlaris</h2>
+          <a href="#" class="see-all" id="see-all-gamekey">Lihat Semua →</a>
+        </div>
+        <div class="products-grid" id="gamekey-grid">
+          <!-- Products injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- VOUCHER SECTION -->
+    <section class="products-section" id="voucher">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">🎟️ Voucher & Gift Card</h2>
+          <a href="#" class="see-all" id="see-all-voucher">Lihat Semua →</a>
+        </div>
+        <div class="products-grid" id="voucher-grid">
+          <!-- Products injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- AKUN SECTION -->
+    <section class="products-section" id="akun-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">👤 Jual Beli Akun Game</h2>
+          <a href="#" class="see-all" id="see-all-akun">Lihat Semua →</a>
+        </div>
+        <div class="products-grid" id="akun-grid">
+          <!-- Products injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ITEM SECTION -->
+    <section class="products-section" id="item-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">⚔️ Item & Skin Game</h2>
+          <a href="#" class="see-all" id="see-all-item">Lihat Semua →</a>
+        </div>
+        <div class="products-grid" id="item-grid">
+          <!-- Products injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- JOKI SECTION -->
+    <section class="products-section" id="joki-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">🏆 Jasa Joki & Boost</h2>
+          <a href="#" class="see-all" id="see-all-joki">Lihat Semua →</a>
+        </div>
+        <div class="products-grid" id="joki-grid">
+          <!-- Products injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- STREAMING & APPS -->
+    <section class="products-section" id="streaming-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">📺 Streaming &amp; Aplikasi</h2>
+          <a href="#" class="see-all" id="see-all-streaming">Lihat Semua →</a>
+        </div>
+        <div class="products-grid" id="streaming-grid">
+          <!-- Products injected by JS -->
+        </div>
+      </div>
+    </section>
+
+
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Kenapa Pilih GameZone?</h2>
+          <p class="section-subtitle">Platform gaming terpercaya dengan jutaan pengguna puas</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card" id="feat-secure">
+            <div class="feature-icon">🛡️</div>
+            <h3>Transaksi Aman</h3>
+            <p>Sistem pembayaran terenkripsi dengan escrow protection untuk setiap transaksi</p>
+          </div>
+          <div class="feature-card" id="feat-fast">
+            <div class="feature-icon">⚡</div>
+            <h3>Pengiriman Instan</h3>
+            <p>Item digital dikirim otomatis dalam hitungan detik setelah pembayaran dikonfirmasi</p>
+          </div>
+          <div class="feature-card" id="feat-guarantee">
+            <div class="feature-icon">💰</div>
+            <h3>Garansi Uang Kembali</h3>
+            <p>Jika produk bermasalah, uang kamu akan dikembalikan penuh tanpa pertanyaan</p>
+          </div>
+          <div class="feature-card" id="feat-support">
+            <div class="feature-icon">🎧</div>
+            <h3>Support 24/7</h3>
+            <p>Tim customer service siap membantu kamu kapanpun kamu membutuhkan bantuan</p>
+          </div>
+          <div class="feature-card" id="feat-cheap">
+            <div class="feature-icon">🏷️</div>
+            <h3>Harga Terbaik</h3>
+            <p>Harga kompetitif dari ratusan seller terverifikasi. Dijamin harga terbaik!</p>
+          </div>
+          <div class="feature-card" id="feat-payment">
+            <div class="feature-icon">💳</div>
+            <h3>Metode Pembayaran Lengkap</h3>
+            <p>Transfer bank, e-wallet, QRIS, kartu kredit, dan masih banyak lagi</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="howto-section" id="howto">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Cara Berbelanja</h2>
+          <p class="section-subtitle">Belanja di GameZone semudah 1-2-3</p>
+        </div>
+        <div class="steps-container">
+          <div class="step-card" id="step-1">
+            <div class="step-number">01</div>
+            <div class="step-icon">🔍</div>
+            <h3>Pilih Produk</h3>
+            <p>Cari dan pilih produk gaming yang kamu inginkan dari ribuan pilihan tersedia</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step-card" id="step-2">
+            <div class="step-number">02</div>
+            <div class="step-icon">💳</div>
+            <h3>Bayar Mudah</h3>
+            <p>Bayar menggunakan metode pembayaran favorit kamu dengan aman dan terenkripsi</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step-card" id="step-3">
+            <div class="step-number">03</div>
+            <div class="step-icon">🎮</div>
+            <h3>Nikmati Game!</h3>
+            <p>Item langsung dikirim ke akun kamu. Selamat menikmati pengalaman gaming terbaik!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">⭐ Kata Mereka Tentang GameZone</h2>
+          <p class="section-subtitle">Jutaan gamer telah mempercayai GameZone</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card" id="testi-1">
+            <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testi-text">"Top up ML paling cepat! Langsung masuk kurang dari 30 detik. Harganya juga murah
+              banget dibanding tempat lain. Recommended!"</p>
+            <div class="testi-user">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #6366f1, #8b5cf6)">A</div>
+              <div>
+                <div class="testi-name">Andi Pratama</div>
+                <div class="testi-role">Mobile Legends Player</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card" id="testi-2">
+            <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testi-text">"Udah beberapa kali beli Steam Key di sini. Selalu dapat key yang valid dan prosesnya
+              gampang banget. Seller-nya juga responsif!"</p>
+            <div class="testi-user">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6)">S</div>
+              <div>
+                <div class="testi-name">Siti Rahayu</div>
+                <div class="testi-role">PC Gamer</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card" id="testi-3">
+            <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testi-text">"Beli Netflix 1 tahun harga sangat terjangkau. CS-nya helpful banget waktu ada
+              masalah. Definitly will buy again!"</p>
+            <div class="testi-user">
+              <div class="testi-avatar" style="background: linear-gradient(135deg, #f97316, #ef4444)">R</div>
+              <div>
+                <div class="testi-name">Rizky Maulana</div>
+                <div class="testi-role">Streaming Enthusiast</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAYMENT METHODS -->
+    <section class="payment-section" id="payment">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">💳 Metode Pembayaran</h2>
+          <p class="section-subtitle">Tersedia berbagai metode pembayaran untuk kemudahan transaksi</p>
+        </div>
+        <div class="payment-grid">
+          <div class="payment-item" id="pay-bca">
+            <span class="payment-logo">🏦</span>
+            <span>BCA</span>
+          </div>
+          <div class="payment-item" id="pay-mandiri">
+            <span class="payment-logo">🏦</span>
+            <span>Mandiri</span>
+          </div>
+          <div class="payment-item" id="pay-gopay">
+            <span class="payment-logo">💚</span>
+            <span>GoPay</span>
+          </div>
+          <div class="payment-item" id="pay-ovo">
+            <span class="payment-logo">💜</span>
+            <span>OVO</span>
+          </div>
+          <div class="payment-item" id="pay-dana">
+            <span class="payment-logo">💙</span>
+            <span>DANA</span>
+          </div>
+          <div class="payment-item" id="pay-qris">
+            <span class="payment-logo">📱</span>
+            <span>QRIS</span>
+          </div>
+          <div class="payment-item" id="pay-visa">
+            <span class="payment-logo">💳</span>
+            <span>Visa</span>
+          </div>
+          <div class="payment-item" id="pay-shopee">
+            <span class="payment-logo">🟠</span>
+            <span>ShopeePay</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-icon">⚡</span>
+            <span class="logo-text">Game<span class="logo-accent">Zone</span></span>
+          </div>
+          <p class="footer-brand-desc">Marketplace game digital terpercaya dengan jutaan pengguna aktif. Belanja aman,
+            cepat, dan terjamin.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" id="social-ig" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="social-link" id="social-fb" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link" id="social-yt" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z">
+                </path>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <a href="#" class="social-link" id="social-tw" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                </path>
+              </svg>
+            </a>
+            <a href="#" class="social-link" id="social-tiktok" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Tentang Kami</h4>
+          <ul>
+            <li><a href="page.html?id=tentang-kami" id="footer-about">Tentang GameZone</a></li>
+            <li><a href="page.html?id=blog" id="footer-blog">Blog</a></li>
+            <li><a href="page.html?id=identitas-brand" id="footer-brand">Identitas Brand</a></li>
+            <li><a href="page.html?id=hubungi-kami" id="footer-contact">Hubungi Kami</a></li>
+            <li><a href="page.html?id=karir" id="footer-career">Karir</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Pembeli</h4>
+          <ul>
+            <li><a href="page.html?id=cara-belanja" id="footer-howbuy">Cara Belanja</a></li>
+            <li><a href="page.html?id=cara-trading" id="footer-howtrade">Cara Trading</a></li>
+            <li><a href="page.html?id=cara-pembayaran" id="footer-payment-info">Cara Pembayaran</a></li>
+            <li><a href="page.html?id=pusat-bantuan" id="footer-help">Pusat Bantuan</a></li>
+            <li><a href="page.html?id=promo-terkini" id="footer-promo-info">Promo Terkini</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Penjual</h4>
+          <ul>
+            <li><a href="page.html?id=cara-menjadi-penjual" id="footer-become-seller">Cara Menjadi Penjual</a></li>
+            <li><a href="page.html?id=biaya-berjualan" id="footer-billing">Biaya Berjualan</a></li>
+            <li><a href="page.html?id=metode-pencairan" id="footer-withdraw">Metode Pencairan</a></li>
+            <li><a href="page.html?id=tips-penjual" id="footer-seller-tips">Tips Penjual</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legalitas</h4>
+          <ul>
+            <li><a href="page.html?id=aturan-penggunaan" id="footer-tos">Aturan Penggunaan</a></li>
+            <li><a href="page.html?id=kebijakan-refund" id="footer-refund">Kebijakan Refund</a></li>
+            <li><a href="page.html?id=kebijakan-privasi" id="footer-privacy">Kebijakan Privasi</a></li>
+          </ul>
+          <h4 style="margin-top: 1.5rem;">Download App</h4>
+          <div class="app-badges">
+            <button class="app-badge" id="btn-playstore">📱 Google Play</button>
+            <button class="app-badge" id="btn-appstore">🍎 App Store</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>GameZone v1.0.0 © 2024 - 2026 PT. GameZone Digital All Rights Reserved.</p>
+        <p>All trademarks belong to their respective owners.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PRODUCT MODAL (IK-Style) -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal ik-modal" id="product-modal">
+      <button class="modal-close" id="modal-close">✕</button>
+      <div class="ik-modal-content" id="modal-content">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>🛒 Keranjang Belanja</h3>
+      <button class="cart-close" id="cart-close">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty" id="cart-empty">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🛒</div>
+        <p>Keranjang kamu masih kosong</p>
+        <small>Tambahkan produk untuk memulai belanja</small>
+      </div>
+    </div>
+    <div class="cart-footer" id="cart-footer" style="display: none;">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span class="cart-total-price" id="cart-total-price">Rp 0</span>
+      </div>
+      <button class="btn-checkout" id="btn-checkout">Checkout Sekarang</button>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast"></div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="checkout-overlay" id="checkout-overlay">
+    <div class="checkout-modal" id="checkout-modal">
+      <!-- Step Indicator -->
+      <div class="checkout-steps" id="checkout-steps">
+        <div class="checkout-step" id="cs-step-1" data-step="1">
+          <div class="cs-dot">1</div>
+          <span>Informasi</span>
+        </div>
+        <div class="checkout-step-line"></div>
+        <div class="checkout-step" id="cs-step-2" data-step="2">
+          <div class="cs-dot">2</div>
+          <span>Pembayaran</span>
+        </div>
+        <div class="checkout-step-line"></div>
+        <div class="checkout-step" id="cs-step-3" data-step="3">
+          <div class="cs-dot">3</div>
+          <span>Konfirmasi</span>
+        </div>
+      </div>
+
+      <!-- Step 1: User Info -->
+      <div class="checkout-step-content" id="checkout-step-1">
+        <div class="checkout-header">
+          <h2 class="checkout-title">📋 Informasi Pembeli</h2>
+          <p class="checkout-subtitle">Isi data kamu untuk melanjutkan pembelian</p>
+        </div>
+        <form class="checkout-form" id="checkout-form-info" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="co-name">Nama Lengkap <span class="required">*</span></label>
+              <input type="text" id="co-name" class="form-input" placeholder="Contoh: Budi Santoso"
+                autocomplete="name" />
+              <span class="form-error" id="err-name"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="co-email">Email <span class="required">*</span></label>
+              <input type="email" id="co-email" class="form-input" placeholder="email@contoh.com"
+                autocomplete="email" />
+              <span class="form-error" id="err-email"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="co-notes">Catatan (opsional)</label>
+            <textarea id="co-notes" class="form-input form-textarea"
+              placeholder="Catatan tambahan untuk pesanan..."></textarea>
+          </div>
+
+          <!-- Coupon -->
+          <div class="coupon-section">
+            <div class="coupon-header" id="coupon-toggle">
+              <span>🏷️ Punya kode kupon?</span>
+              <span class="coupon-arrow" id="coupon-arrow">▼</span>
+            </div>
+            <div class="coupon-body" id="coupon-body">
+              <div class="coupon-input-row">
+                <input type="text" id="co-coupon" class="form-input coupon-input" placeholder="Masukkan kode kupon" />
+                <button type="button" class="coupon-apply-btn" id="coupon-apply-btn">Terapkan</button>
+              </div>
+              <span class="coupon-msg" id="coupon-msg"></span>
+            </div>
+          </div>
+
+          <!-- Order Summary mini -->
+          <div class="mini-summary" id="mini-summary">
+            <!-- filled by JS -->
+          </div>
+        </form>
+        <div class="checkout-footer">
+          <button class="co-btn-back" id="co-back-1" onclick="closeCheckout()">✕ Batal</button>
+          <button class="co-btn-next" id="co-next-1">Lanjut ke Pembayaran →</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Payment Method -->
+      <div class="checkout-step-content hidden" id="checkout-step-2">
+        <div class="checkout-header">
+          <h2 class="checkout-title">💳 Pilih Metode Pembayaran</h2>
+          <p class="checkout-subtitle">Pilih metode pembayaran yang paling mudah buat kamu</p>
+        </div>
+
+        <div class="payment-methods-grid" id="payment-methods-grid">
+          <!-- E-Wallet -->
+          <div class="pm-group">
+            <div class="pm-group-label">💚 E-Wallet</div>
+            <div class="pm-options">
+              <label class="pm-option" id="pm-gopay">
+                <input type="radio" name="payment" value="gopay" class="pm-radio" />
+                <div class="pm-icon">💚</div>
+                <div class="pm-info">
+                  <div class="pm-name">GoPay</div>
+                  <div class="pm-desc">Bayar lewat aplikasi Gojek</div>
+                </div>
+                <div class="pm-check">✓</div>
+              </label>
+              <label class="pm-option" id="pm-ovo">
+                <input type="radio" name="payment" value="ovo" class="pm-radio" />
+                <div class="pm-icon">💜</div>
+                <div class="pm-info">
+                  <div class="pm-name">OVO</div>
+                  <div class="pm-desc">Bayar lewat aplikasi OVO</div>
+                </div>
+                <div class="pm-check">✓</div>
+              </label>
+              <label class="pm-option" id="pm-dana">
+                <input type="radio" name="payment" value="dana" class="pm-radio" />
+                <div class="pm-icon">💙</div>
+                <div class="pm-info">
+                  <div class="pm-name">DANA</div>
+                  <div class="pm-desc">Bayar lewat aplikasi DANA</div>
+                </div>
+                <div class="pm-check">✓</div>
+              </label>
+              <label class="pm-option" id="pm-shopee">
+                <input type="radio" name="payment" value="shopeepay" class="pm-radio" />
+                <div class="pm-icon">🟠</div>
+                <div class="pm-info">
+                  <div class="pm-name">ShopeePay</div>
+                  <div class="pm-desc">Bayar lewat aplikasi Shopee</div>
+                </div>
+                <div class="pm-check">✓</div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Transfer Bank -->
+          <div class="pm-group">
+            <div class="pm-group-label">🏦 Transfer Bank</div>
+            <div class="pm-options">
+              <label class="pm-option" id="pm-bca">
+                <input type="radio" name="payment" value="bca" class="pm-radio" />
+                <div class="pm-icon">🏦</div>
+                <div class="pm-info">
+                  <div class="pm-name">Bank BCA</div>
+                  <div class="pm-desc">Virtual account BCA</div>
+                </div>
+                <div class="pm-check">✓</div>
+              </label>
+              <label class="pm-option" id="pm-mandiri">
+                <input type="radio" name="payment" value="mandiri" class="pm-radio" />
+                <div class="pm-icon">🏦</div>
+                <div class="pm-info">
+                  <div class="pm-name">Bank Mandiri</div>
+                  <div class="pm-desc">Virtual account Mandiri</div>
+                </div>
+                <div class="pm-check">✓</div>
+              </label>
+              <label class="pm-option" id="pm-bni">
+                <input type="radio" name="payment" value="bni" class="pm-radio" />
+                <div class="pm-icon">🏦</div>
+                <div class="pm-info">
+                  <div class="pm-name">Bank BNI</div>
+                  <div class="pm-desc">Virtual account BNI</div>
+                </div>
+                <div class="pm-check">✓</div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Lainnya -->
+          <div class="pm-group">
+            <div class="pm-group-label">📱 Lainnya</div>
+            <div class="pm-options">
+              <label class="pm-option" id="pm-qris">
+                <input type="radio" name="payment" value="qris" class="pm-radio" />
+                <div class="pm-icon">📱</div>
+                <div class="pm-info">
+                  <div class="pm-name">QRIS</div>
+                  <div class="pm-desc">Scan QR dari semua e-wallet</div>
+                </div>
+                <div class="pm-check">✓</div>
+              </label>
+              <label class="pm-option" id="pm-cc">
+                <input type="radio" name="payment" value="cc" class="pm-radio" />
+                <div class="pm-icon">💳</div>
+                <div class="pm-info">
+                  <div class="pm-name">Kartu Kredit / Debit</div>
+                  <div class="pm-desc">Visa, Mastercard, JCB</div>
+                </div>
+                <div class="pm-check">✓</div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <span class="form-error" id="err-payment" style="display:block; margin-top:0.5rem;"></span>
+
+        <div class="checkout-footer">
+          <button class="co-btn-back" id="co-back-2">← Kembali</button>
+          <button class="co-btn-next" id="co-next-2">Lihat Ringkasan →</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Confirmation -->
+      <div class="checkout-step-content hidden" id="checkout-step-3">
+        <div class="checkout-header">
+          <h2 class="checkout-title">📝 Ringkasan Pesanan</h2>
+          <p class="checkout-subtitle">Periksa kembali pesanan sebelum melanjutkan</p>
+        </div>
+
+        <div class="confirm-grid">
+          <!-- Order Items -->
+          <div class="confirm-section">
+            <div class="confirm-section-title">🛒 Item Pesanan</div>
+            <div class="confirm-items" id="confirm-items"></div>
+          </div>
+
+          <!-- Buyer Info -->
+          <div class="confirm-section">
+            <div class="confirm-section-title">👤 Informasi Pembeli</div>
+            <div class="confirm-info" id="confirm-info"></div>
+          </div>
+
+          <!-- Payment Method -->
+          <div class="confirm-section">
+            <div class="confirm-section-title">💳 Metode Pembayaran</div>
+            <div class="confirm-payment" id="confirm-payment"></div>
+          </div>
+
+          <!-- Price Breakdown -->
+          <div class="confirm-section price-breakdown">
+            <div class="confirm-section-title">💰 Rincian Harga</div>
+            <div class="price-rows" id="price-rows"></div>
+          </div>
+        </div>
+
+        <div class="checkout-footer">
+          <button class="co-btn-back" id="co-back-3">← Kembali</button>
+          <button class="co-btn-pay" id="co-btn-pay">
+            <span id="co-pay-spinner" class="pay-spinner hidden"></span>
+            <span id="co-pay-text">⚡ Bayar Sekarang</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 4: Success -->
+      <div class="checkout-step-content hidden" id="checkout-step-success">
+        <div class="success-screen" id="success-screen">
+          <div class="success-animation">
+            <div class="success-ring"></div>
+            <div class="success-check">✓</div>
+          </div>
+          <h2 class="success-title">Pembayaran Berhasil! 🎉</h2>
+          <p class="success-desc">Terima kasih atas pembelianmu! Item kamu sedang diproses dan akan segera dikirimkan.
+          </p>
+          <div class="success-order-id" id="success-order-id"></div>
+          <div class="success-items" id="success-items"></div>
+          <div class="success-actions">
+            <button class="co-btn-next" id="co-done-btn" onclick="closeCheckout(); clearCartAfterOrder();">🎮 Lanjut
+              Belanja</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="checkout-close-btn" id="checkout-close-btn" title="Tutup">✕</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="ik_modal_patch.js"></script>
+  <script src="xc_patch.js"></script>
+</body>
+
+</html>

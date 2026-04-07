@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masuk / Daftar - GameZone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="auth.css" />
+  <style>
+    body {
+      background: #0a0a0a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    .auth-page-wrap {
+      width: 100%;
+      max-width: 480px;
+      padding: 1rem;
+    }
+    .auth-modal {
+      transform: none !important;
+      position: relative;
+    }
+    .auth-close-btn {
+      display: none; /* Hide close button on standalone page */
+    }
+    .back-home {
+      display: block;
+      text-align: center;
+      margin-top: 1.5rem;
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .back-home:hover {
+      color: #f1f5f9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="auth-page-wrap">
+    <div class="auth-modal" id="auth-modal">
+      
+      <!-- Brand logo -->
+      <div class="auth-brand" style="margin-bottom: 2rem;">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text" style="color: #fff;">Game<span style="color: #06b6d4;">Zone</span></span>
+      </div>
+
+      <!-- Tabs -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tab-login" data-tab="login">Masuk</button>
+        <button class="auth-tab" id="tab-register" data-tab="register">Daftar</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <div class="auth-form-wrap" id="auth-login-wrap">
+        <h2 class="auth-title">Selamat Datang Kembali! 👋</h2>
+        <p class="auth-subtitle">Masuk ke akun GameZone kamu</p>
+
+        <form class="auth-form" id="auth-login-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="login-email">Email</label>
+            <div class="auth-input-wrap">
+              <span class="auth-input-icon">📧</span>
+              <input type="email" id="login-email" class="form-input auth-input"
+                placeholder="email@contoh.com" autocomplete="email" />
+            </div>
+            <span class="form-error" id="login-err-email"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="login-password">
+              Password
+              <a href="#" class="forgot-link" id="forgot-link">Lupa password?</a>
+            </label>
+            <div class="auth-input-wrap">
+              <span class="auth-input-icon">🔒</span>
+              <input type="password" id="login-password" class="form-input auth-input"
+                placeholder="Masukkan password" autocomplete="current-password" />
+              <button type="button" class="toggle-pw" id="toggle-login-pw" tabindex="-1">👁️</button>
+            </div>
+            <span class="form-error" id="login-err-pw"></span>
+          </div>
+
+          <div class="auth-remember" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+            <label class="auth-check-label">
+              <input type="checkbox" id="remember-me" class="auth-checkbox" />
+              <span class="auth-checkmark"></span>
+              Ingat saya
+            </label>
+          </div>
+
+          <span class="form-error auth-form-error" id="login-err-general"></span>
+
+          <button type="submit" class="auth-submit-btn" id="btn-login-submit">
+            <span class="auth-btn-spinner hidden" id="login-spinner"></span>
+            <span id="login-btn-text">⚡ Masuk Sekarang</span>
+          </button>
+        </form>
+
+        <div class="auth-divider"><span>atau</span></div>
+
+        <button class="auth-social-btn" id="btn-google-login">
+          <span>🌐</span> Lanjutkan dengan Google
+        </button>
+
+        <p class="auth-switch-text">
+          Belum punya akun? <button type="button" class="auth-switch-link" id="switch-to-register">Daftar sekarang</button>
+        </p>
+      </div>
+
+      <!-- REGISTER FORM -->
+      <div class="auth-form-wrap hidden" id="auth-register-wrap">
+        <h2 class="auth-title">Buat Akun Baru 🎉</h2>
+        <p class="auth-subtitle">Bergabung dan nikmati ribuan produk gaming</p>
+
+        <form class="auth-form" id="auth-register-form" novalidate>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem;">
+            <div class="form-group">
+              <label class="form-label" for="reg-name">Nama Lengkap <span style="color:#ef4444;">*</span></label>
+              <div class="auth-input-wrap">
+                <span class="auth-input-icon">👤</span>
+                <input type="text" id="reg-name" class="form-input auth-input"
+                  placeholder="Nama kamu" autocomplete="name" />
+              </div>
+              <span class="form-error" id="reg-err-name"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="reg-username">Username <span style="color:#ef4444;">*</span></label>
+              <div class="auth-input-wrap">
+                <span class="auth-input-icon">🎮</span>
+                <input type="text" id="reg-username" class="form-input auth-input"
+                  placeholder="Username" autocomplete="username" />
+              </div>
+              <span class="form-error" id="reg-err-username"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reg-email">Email <span style="color:#ef4444;">*</span></label>
+            <div class="auth-input-wrap">
+              <span class="auth-input-icon">📧</span>
+              <input type="email" id="reg-email" class="form-input auth-input"
+                placeholder="email@contoh.com" autocomplete="email" />
+            </div>
+            <span class="form-error" id="reg-err-email"></span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem;">
+            <div class="form-group">
+              <label class="form-label" for="reg-password">Password <span style="color:#ef4444;">*</span></label>
+              <div class="auth-input-wrap">
+                <span class="auth-input-icon">🔒</span>
+                <input type="password" id="reg-password" class="form-input auth-input"
+                  placeholder="Min 8 karakter" autocomplete="new-password" />
+                <button type="button" class="toggle-pw" id="toggle-reg-pw" tabindex="-1">👁️</button>
+              </div>
+              <span class="form-error" id="reg-err-pw"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="reg-confirm">Konfirmasi <span style="color:#ef4444;">*</span></label>
+              <div class="auth-input-wrap">
+                <span class="auth-input-icon">🔒</span>
+                <input type="password" id="reg-confirm" class="form-input auth-input"
+                  placeholder="Ulangi password" autocomplete="new-password" />
+                <button type="button" class="toggle-pw" id="toggle-reg-confirm" tabindex="-1">👁️</button>
+              </div>
+              <span class="form-error" id="reg-err-confirm"></span>
+            </div>
+          </div>
+
+          <!-- Password strength -->
+          <div class="pw-strength-wrap" id="pw-strength-wrap">
+            <div class="pw-strength-bar">
+              <div class="pw-strength-fill" id="pw-strength-fill"></div>
+            </div>
+            <span class="pw-strength-label" id="pw-strength-label">Kekuatan password</span>
+          </div>
+
+          <div class="auth-remember" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+            <label class="auth-check-label">
+              <input type="checkbox" id="agree-tos" class="auth-checkbox" />
+              <span class="auth-checkmark"></span>
+              Saya setuju dengan <a href="#" class="auth-link">Syarat &amp; Ketentuan</a>
+            </label>
+          </div>
+
+          <span class="form-error auth-form-error" id="reg-err-general"></span>
+
+          <button type="submit" class="auth-submit-btn" id="btn-register-submit">
+            <span class="auth-btn-spinner hidden" id="register-spinner"></span>
+            <span id="register-btn-text">🎉 Buat Akun Gratis</span>
+          </button>
+        </form>
+
+        <div class="auth-divider"><span>atau</span></div>
+
+        <button class="auth-social-btn" id="btn-google-register">
+          <span>🌐</span> Daftar dengan Google
+        </button>
+
+        <p class="auth-switch-text">
+          Sudah punya akun? <button type="button" class="auth-switch-link" id="switch-to-login">Masuk di sini</button>
+        </p>
+      </div>
+    </div>
+    
+    <a href="index.html" class="back-home">← Kembali ke Halaman Utama</a>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="auth.js"></script>
+</body>
+</html>
